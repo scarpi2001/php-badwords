@@ -15,21 +15,29 @@
         ?>
     </h1>
 
-    <h1>
+    <h2>
         <?php
             $length = strlen($paragraph);
 
             echo "Lunghezza paragrafo: " . $length . " caratteri";
         ?>
-    </h1>
+    </h2>
 
     <h1>
         <?php
             $badword = $_GET["badword"];
-            str_replace($badword, "***", $paragraph);
+            $newparagraph = str_replace($badword, "***", $paragraph);
+
+            echo $newparagraph;
         ?>
     </h1>
-    
+
+    <h2>
+        <?php
+            $newlength = strlen($newparagraph);
+            echo "Lunghezza paragrafo: " . $newlength . " caratteri";
+        ?>
+    </h2>
     
 </body>
 </html>
