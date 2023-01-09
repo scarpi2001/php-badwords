@@ -22,6 +22,13 @@
             echo "Lunghezza paragrafo: " . $length . " caratteri";
         ?>
     </h1>
+
+    <h1>
+        <?php
+            $badword = $_GET["badword"];
+            str_replace($badword, "***", $paragraph);
+        ?>
+    </h1>
     
     
 </body>
